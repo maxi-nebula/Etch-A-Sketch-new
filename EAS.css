@@ -1,0 +1,85 @@
+/** @format */
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  height: 500px;
+  width: 300px;
+  padding: 50px;
+
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item {
+  padding: 1em;
+  border: 0.1px solid grey;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  padding: 50px;
+}
+
+.on_mouse_enter {
+  border: 1px solid orangered;
+  background-color: orange;
+}
+
+.eraserbutton {
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+}
+.buttondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.colorpanel {
+  height: 20px;
+  width: 200px;
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorbox {
+  border: solid 1px black;
+  height: 40px;
+  width: 40px;
+}
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+#black {
+  background-color: black;
+}
+#blue {
+  background-color: blue;
+}
+
+#pink {
+  background-color: pink;
+}
