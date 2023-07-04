@@ -4,7 +4,9 @@ const container = document.getElementById("container");
 const eraserButton = document.getElementById("eraser");
 const resetButton = document.getElementById("reset");
 const brushButton = document.getElementById("brush");
-console.log(resetButton);
+let colorPalet = document.querySelectorAll(".colorbox");
+console.log(colorPalet);
+
 function gridCreator(rows, columns) {
   container.style.setProperty("--grid-rows", rows);
   container.style.setProperty("--grid-cols", columns);
@@ -15,16 +17,29 @@ function gridCreator(rows, columns) {
 
   const hoveredGrid = document.querySelectorAll(".grid-item");
 
-  hoveredGrid.forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      element.classList.add("on_mouse_enter");
+  //hoveredGrid.forEach((element) => {
+  //element.addEventListener("mouseenter", () => {
+  // element.classList.add("on_mouse_enter");
+  // });
+  // });
+
+  colorPalet.forEach((color) => {
+    color.addEventListener("click", () => {
+      console.log(color.id);
+      hoveredGrid.forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+          element.style.backgroundColor = `${color.id}`;
+        });
+      });
     });
   });
 
   brushButton.addEventListener("click", () => {
     hoveredGrid.forEach((element) => {
       element.addEventListener("mouseenter", () => {
-        element.classList.add("on_mouse_enter");
+        //element.classList.add("on_mouse_enter");
+        element.style.backgroundColor = "yellow";
+        element.style.bordercolor = "red";
       });
     });
   });
@@ -32,27 +47,15 @@ function gridCreator(rows, columns) {
   eraserButton.addEventListener("click", () => {
     hoveredGrid.forEach((element) => {
       element.addEventListener("mouseenter", () => {
-        element.classList.remove("on_mouse_enter");
+        //element.classList.remove("on_mouse_enter");
+        element.style.backgroundColor = "black";
       });
     });
   });
 
   resetButton.addEventListener("click", () => {
-    let styledGrid = document.querySelectorAll(".on_mouse_enter");
-    console.log(styledGrid);
-
-    styledGrid.forEach((element) => {
-      {
-        element.classList.remove("on_mouse_enter");
-      }
-    });
-  });
-
-  let colorPalet = document.querySelectorAll(".colorbox");
-  console.log(colorPalet);
-  colorPalet.forEach((color) => {
-    color.addEventListener("click", () => {
-      console.log(color.id);
+    hoveredGrid.forEach((grid) => {
+      grid.style.backgroundColor = "black";
     });
   });
 }

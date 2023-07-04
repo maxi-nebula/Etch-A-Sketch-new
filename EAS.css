@@ -22,7 +22,7 @@
 }
 .grid-item {
   padding: 1em;
-  border: 0.1px solid grey;
+  border: 0.1px solid orange;
   background-color: black;
   text-align: center;
   cursor: pointer;
@@ -32,11 +32,6 @@ h1 {
   color: red;
   text-align: center;
   padding: 50px;
-}
-
-.on_mouse_enter {
-  border: 1px solid orangered;
-  background-color: orange;
 }
 
 .eraserbutton {
@@ -66,20 +61,20 @@ h1 {
   height: 40px;
   width: 40px;
 }
-#red {
-  background-color: red;
+#lightcoral {
+  background-color: lightcoral;
 }
 
-#green {
-  background-color: green;
+#lightseagreen {
+  background-color: lightseagreen;
 }
-#black {
-  background-color: black;
+#lightsalmon {
+  background-color: lightsalmon;
 }
-#blue {
-  background-color: blue;
+#lightblue {
+  background-color: lightskyblue;
 }
 
-#pink {
-  background-color: pink;
+#orchid {
+  background-color: orchid;
 }
